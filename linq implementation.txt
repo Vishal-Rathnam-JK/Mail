@@ -1,0 +1,210 @@
+class LinqImplemenation
+    {
+        //static void Main(string[] args)
+        //{
+            int[] int_arr = { 1, 2, 3, 4, 5, 5, 3, 4, 2, 11, 20, 11, 0,13 };
+ //               // Displaying all elements in the array
+            //foreach (int item in int_arr)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            
+//                 // displaying all elements using linq
+            //IEnumerable<int> il = from a in int_arr select a;   // var can also be used instead of ienumerable
+            //foreach (int item in il)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            
+            
+//                   // Displaying all elements greater than 5  
+            //foreach (int item in int_arr)
+            //{
+            //    if (item>5)
+            //    {
+            //        Console.WriteLine(item);
+            //    }
+            //}
+
+
+//                  // Displaying all elements greater than 5 using linq
+            //IEnumerable<int> il = from a in int_arr where a>5 orderby a descending select a; // var can also be used instead of ienumerable
+            //foreach (int item in il)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+
+
+//                // Displaying all distinct elements  using linq
+            //var il = (from a in int_arr select a).Distinct();
+            //foreach (var item in il)
+            //{
+            //    Console.WriteLine(item);  
+            //}
+
+
+//                // Displaying all odd elements greater than 5  using linq
+            //var il = from a in int_arr where a > 5 && a % 2 > 0 select a;
+            //foreach (var item in il)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+
+
+//                //displaying all distinct odd elements greater than 5 using lambda operator
+            //var output=int_arr.Where(c => c>5 && c%2 >0).Distinct();
+            //foreach (var item in output)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+
+
+
+//                     //displaying array in descending order
+            //Array.Sort(int_arr);
+            //Array.Reverse(int_arr);
+            //foreach (int item in int_arr)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+
+
+//                     //displaying array in descending order using lambda
+            //var output = int_arr.Where(c => c > 5).OrderByDescending(d => d);
+            //foreach (var item in output)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+
+//                // displaying number of unique elements
+            //Console.WriteLine(int_arr.Distinct().Count());
+
+
+
+//                    // display average of elements greater than 5 using linq 
+            //var il = (from a in int_arr where a > 5 select a).Average();
+            //Console.WriteLine(il);
+//                   //using lambda
+            //var output = int_arr.Where(a => a > 5).Average();
+            //Console.WriteLine(output);
+
+
+
+            string[] str_arr = { "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten" };
+       
+  
+//                    // order by length of word , if same order by alphabetical order using linq          
+            //var output = from a in str_arr orderby a.Length, a select a;
+            //foreach (var item in output)
+            //{
+            //    Console.WriteLine(item);
+            //}
+           
+            
+//                             //   using lambda
+            //var out1 = str_arr.OrderBy(c => c.Length).ThenBy(c => c);
+            //foreach (var item in out1)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+
+
+
+//                  // display all elements in the array that has letter 'o' in it
+
+            //foreach (string item in str_arr)
+            //{
+            //    if (item.Contains('o'))
+            //    {
+            //        Console.WriteLine(item);
+            //    }
+            //}
+//                   // using linq
+            //var out1 = from a in str_arr where a.Contains('o') select a;
+            //foreach (string item in out1)
+            //{
+            //    Console.WriteLine(item);
+            //}
+//                     // using lambda
+            //var output = str_arr.Where(a => a.Contains('o'));
+            //foreach (string item in output)
+            //{
+            //    Console.WriteLine(item);
+            //}
+//                  // display highest three numbers in int array
+//                  // using linq displaying 2nd and third highest
+            //var output = (from a in int_arr orderby a descending select a).Take(3).Skip(1);
+            //foreach (int item in output)
+            //{
+            //    Console.WriteLine(item);
+            //}
+//                 // using lambda
+            //var output = int_arr.OrderByDescending(c => c).Skip(1).Take(2);
+            //foreach (int item in output)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            
+            
+//           // display 3rd highest element without using skip and take in int array using lambda
+            //var output = int_arr.OrderByDescending(c => c).ElementAt(2);
+            //Console.WriteLine(output);
+           
+            
+//            // using linq
+            //var output = (from a in int_arr orderby a descending  select a).ElementAt(2);
+            //Console.WriteLine(output);
+
+
+
+//             // create an object array
+            //object[] obj = { 1, 'a', "abc", 2.5 };
+            //var result = obj.OfType<double>();
+            //Console.WriteLine(result);
+            //foreach (double item in result) // must use foreach because return type of oftype is ienumerator
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            
+//              // display count of each element in int_array
+            //var result = from a in int_arr
+            //             group a by a into res
+            //             select new { data = res.Key , total = res.Count() };
+            //foreach (var item in result)
+            //{
+            //    Console.WriteLine("the number {0} is present {1} times",item.data,item.total);
+            //    Console.WriteLine(item);
+            //}
+
+
+
+
+//                  // display all array elements that are repeated
+            //var result = from a in int_arr
+            //             group a by a into res
+            //             where res.Count()>1
+            //             select new { data = res.Key, total = res.Count() };
+            //foreach (var item in result)
+            //{
+            //    Console.WriteLine("the number {0} is present {1} times", item.data, item.total);
+            //    Console.WriteLine(item);
+            //}
+//                     // using lambda
+        //    var result = int_arr.GroupBy(s =>s).Where(g => g.Count()>1).Select(res=>new{data=res.Key,total=res.Count()});
+        //    foreach (var item in result)
+        //    {
+        //        Console.WriteLine(item);
+        //    }
+        //}
+    }
+}
